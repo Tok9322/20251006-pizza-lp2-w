@@ -38,3 +38,61 @@
     if(e.key === 'Escape') close();
   });
 })();
+
+// Menu category filter
+(function(){
+  const container = document.querySelector('#menu');
+  if(!container) return;
+  const buttons = container.querySelectorAll('.filter-btn');
+  const cards = container.querySelectorAll('.cards .card');
+
+  function applyFilter(key){
+    cards.forEach(card => {
+      const cat = card.getAttribute('data-cat') || '';
+      const show = (key === 'all') || (cat === key);
+      card.classList.toggle('is-hidden', !show);
+    });
+  }
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const key = btn.getAttribute('data-filter') || 'all';
+      buttons.forEach(b => b.classList.remove('is-active'));
+      btn.classList.add('is-active');
+      applyFilter(key);
+      // optional: update hash
+      history.replaceState(null, '', `#menu:${key}`);
+    });
+  });
+
+  // Initialize from hash if present (#menu:pizza etc.)
+  const m = location.hash.match(/#menu:(\w+)/);
+  const initial = m ? m[1] : 'all';
+  const initBtn = [...buttons].find(b => b.getAttribute('data-filter') === initial);
+  if(initBtn){
+    initBtn.click();
+  } else {
+    applyFilter('all');
+  }
+})();
+
+// Back to top button
+(function(){
+  const btn = document.getElementById('backToTop');
+  if(!btn) return;
+
+  const TH = 300; // threshold in px
+  const onScroll = () => {
+    if(window.scrollY > TH){
+      btn.classList.add('is-show');
+    } else {
+      btn.classList.remove('is-show');
+    }
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();

@@ -45,8 +45,15 @@
     <section class="section" id="menu">
       <div class="container">  
         <h2 class="section-title">おすすめメニュー</h2>
+        <div class="menu-filters" role="tablist" aria-label="メニューカテゴリ">
+          <button class="filter-btn is-active" role="tab" aria-selected="true" data-filter="all">すべて</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-filter="pizza">ピザ (Pizza)</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-filter="antipasti">前菜 (Antipasti)</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-filter="pasta">パスタ (Pasta)</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-filter="bevande">ドリンク (Bevande)</button>
+        </div>
         <div class="cards">
-          <article class="card">
+          <article class="card" data-cat="pizza">
             <img src="./assets/images/Margherita.jpg" alt="マルゲリータ" />
             <div class="card-body">
               <h3>マルゲリータ</h3>
@@ -54,7 +61,7 @@
               <span class="price">¥1,280</span>
             </div>
           </article>
-          <article class="card">
+          <article class="card" data-cat="pizza">
             <img src="./assets/images/QuattroFormaggi.jpg" alt="クワトロフォルマッジ" />
             <div class="card-body">
               <h3>クワトロフォルマッジ</h3>
@@ -62,12 +69,36 @@
               <span class="price">¥1,580</span>
             </div>
           </article>
-          <article class="card">
+          <article class="card" data-cat="pizza">
             <img src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?q=80&w=800&auto=format&fit=crop" alt="ディアボラ" />
             <div class="card-body">
               <h3>ディアボラ</h3>
               <p>ピリッと辛いサラミとペッパーの刺激。ワインが進む。</p>
               <span class="price">¥1,480</span>
+            </div>
+          </article>
+          <article class="card" data-cat="antipasti">
+            <img src="./assets/images/prosciutto.jpg" alt="生ハム" />
+            <div class="card-body">
+              <h3>生ハム</h3>
+              <p>香り高いプロシュートを薄切りで。ワインのお供に最適。</p>
+              <span class="price">¥780</span>
+            </div>
+          </article>
+          <article class="card" data-cat="pasta">
+            <img src="./assets/images/italian-food-7706887_1280.jpg" alt="ペスカトーレ" />
+            <div class="card-body">
+              <h3>ペスカトーレ</h3>
+              <p>魚介の旨みをトマトソースに凝縮した贅沢な一皿。</p>
+              <span class="price">¥1,380</span>
+            </div>
+          </article>
+          <article class="card" data-cat="bevande">
+            <img src="./assets/images/wine-2408620_1280.jpg" alt="ワイン" />
+            <div class="card-body">
+              <h3>グラスワイン</h3>
+              <p>赤・白・スパークリングを日替わりでご用意。</p>
+              <span class="price">¥680〜</span>
             </div>
           </article>
         </div>
@@ -150,6 +181,9 @@
       </nav>
     </div>
   </footer>
+  
+  <!-- Back to top -->
+  <button id="backToTop" aria-label="トップに戻る">↑</button>
   
   <!-- Lightbox -->
   <div id="lightbox" aria-hidden="true">
