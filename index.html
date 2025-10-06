@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FORNO PIZZA | 石窯ピッツァとワインのレストラン</title>
+  <meta name="description" content="薪窯で焼き上げる本格ナポリピッツァとセレクトワインのお店。テイクアウト・予約受付中。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#">FORNO<span> PIZZA</span></a>
+      <nav class="nav">
+        <a href="#menu">メニュー</a>
+        <a href="#about">こだわり</a>
+        <a href="#gallery">ギャラリー</a>
+        <a href="#reserve" class="btn btn--sm">予約</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1 class="display">薪窯で、香る一枚。</h1>
+          <p>高温で一気に焼き上げるナポリスタイル。小麦の旨み、チーズの余韻、焦げ目の香ばしさ。街で一番“できたて”に近い瞬間をどうぞ。</p>
+          <div class="actions">
+            <a href="#reserve" class="btn">今すぐ予約</a>
+            <a href="#menu" class="btn btn--ghost">メニューを見る</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img src="./assets/images/hero-3.jpg" alt="焼きたてのピッツァ"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu Highlights -->
+    <section class="section" id="menu">
+      <div class="container">  
+        <h2 class="section-title">おすすめメニュー</h2>
+        <div class="cards">
+          <article class="card">
+            <img src="./assets/images/Margherita.jpg" alt="マルゲリータ" />
+            <div class="card-body">
+              <h3>マルゲリータ</h3>
+              <p>トマト、モッツァレラ、バジル。素材の良さを直球で。</p>
+              <span class="price">¥1,280</span>
+            </div>
+          </article>
+          <article class="card">
+            <img src="./assets/images/QuattroFormaggi.jpg" alt="クワトロフォルマッジ" />
+            <div class="card-body">
+              <h3>クワトロフォルマッジ</h3>
+              <p>4種チーズのコクを蜂蜜で引き立てる贅沢な一枚。</p>
+              <span class="price">¥1,580</span>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?q=80&w=800&auto=format&fit=crop" alt="ディアボラ" />
+            <div class="card-body">
+              <h3>ディアボラ</h3>
+              <p>ピリッと辛いサラミとペッパーの刺激。ワインが進む。</p>
+              <span class="price">¥1,480</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section section--alt" id="about">
+      <div class="container about">
+        <div class="about-media">
+          <img src="./assets/images/makigama.jpg" alt="薪窯" />
+        </div>
+        <div class="about-copy">
+          <h2 class="section-title">素材と温度の、正直さ。</h2>
+          <p>生地は長時間低温発酵。ソースはイタリア産トマトを丁寧に濾し、モッツァレラは毎日入荷。450℃の石窯で90秒。外は香ばしく、中はもっちり。</p>
+          <ul class="list">
+            <li>毎朝仕込みの自家製生地</li>
+            <li>季節野菜と直輸入チーズ</li>
+            <li>グラスからボトルまで揃う自然派ワイン</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section" id="gallery">
+      <div class="container">
+        <h2 class="section-title">ギャラリー</h2>
+        <div class="masonry">
+          <img src="./assets/images/Pizza_dough.jpg" alt="ピザ生地" />
+          <img src="./assets/images/italian-food-7706887_1280.jpg" alt="窯" />
+          <img src="./assets/images/ingredients.jpg" alt="チーズ" />
+          <img src="./assets/images/prosciutto.jpg" alt="生ハム" />
+          <img src="./assets/images/food-4280369_1920.jpg" alt="テーブル" />
+          <img src="./assets/images/Interior.jpg" alt="ワイン" />
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA / Reserve -->
+    <section class="cta" id="reserve">
+      <div class="container cta-inner">
+        <h2>ご予約・テイクアウト</h2>
+        <p>電話またはフォームで承ります。席数に限りがございますので事前予約がおすすめです。</p>
+        <div class="cta-actions">
+          <a class="btn btn--inverse" href="tel:000-0000-0000">電話する 000-0000-0000</a>
+          <a class="btn" href="#">Web予約フォーム</a>
+        </div>
+        <small class="note">営業時間 11:30–22:00 (L.O.21:30) / 火曜定休</small>
+      </div>
+    </section>
+
+    <!-- Map -->
+    <section class="section" id="map">
+      <div class="container">
+        <h2 class="section-title">アクセス</h2>
+        <div class="map-wrap">
+          <iframe
+            src="https://www.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%8D%83%E4%BB%A3%E7%94%B0%E5%8C%BA&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <a class="logo" href="#">FORNO<span> PIZZA</span></a>
+        <p class="muted">〒100-0000 東京都千代田区〇〇 1-2-3<br>© Forno Pizza</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="#menu">メニュー</a>
+        <a href="#about">こだわり</a>
+        <a href="#gallery">ギャラリー</a>
+        <a href="#reserve">予約</a>
+      </nav>
+    </div>
+  </footer>
+  
+  <!-- Lightbox -->
+  <div id="lightbox" aria-hidden="true">
+    <button class="lb-close" type="button" data-close aria-label="閉じる">×</button>
+    <img src="" alt="" />
+  </div>
+  
+  <script src="./main.js"></script>
+</body>
+</html>
